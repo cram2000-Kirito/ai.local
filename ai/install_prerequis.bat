@@ -3,8 +3,8 @@ set lib=0
 
 ping github.com /w 10000 /n 2 >nul 2>&1 || echo Aucune connexion avec github n'a pu se faire, veuillez reessayer plus tard... && goto end
 if not exist privileges.bat powershell -Command "Invoke-WebRequest https://raw.githubusercontent.com/cram2000-Kirito/WinBatch/main/privileges.bat -OutFile privileges.bat"
-if not exist ai.assistant.py powershell -Command "Invoke-WebRequest http://www.example.com/ai.assistant.py -OutFile ai.assistant.py"
-if not exist ai.launcher.bat powershell -Command "Invoke-WebRequest http://www.example.com/package.zip -OutFile ai.launcher.bat"
+if not exist ai.assistant.py powershell -Command "Invoke-WebRequest https://raw.githubusercontent.com/cram2000-Kirito/ai.local/main/ai/ai.assistant.py -OutFile ai.assistant.py"
+if not exist ai.launcher.bat powershell -Command "Invoke-WebRequest https://raw.githubusercontent.com/cram2000-Kirito/ai.local/main/ai/ai.launcher.bat -OutFile ai.launcher.bat"
 call privileges.bat
 
 python --version >nul 2>&1 && goto python_installer
@@ -69,6 +69,7 @@ if exist testai.py echo testai.py is exist
 if not exist testai.py echo il manque testai.py && set check="False"
 if exist ai.launcher.bat echo ai.launcher.bat is exist
 if exist ai.launcher.bat echo il manque ai.launcher.bat && set check="False"
+if check=="True" echo Sucessfull !!!
 if check=="False" echo veuillez executer &0 pour installer les prerequis & goto end
 
 :end
