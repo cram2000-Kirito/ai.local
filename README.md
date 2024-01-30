@@ -18,7 +18,7 @@
 3. Quand vous aurez fini de parler avec elle, envoyé "exit"
 4. Si exit ne fonctionne pas ou si l'ia crash, fermer simplement la fenêtre
 
-# Dodo liste:
+# To Do list:
 - Description projet
 - ajout d'un fichier contenant l'ip et l'url du serveur
 - les scripts (python et bash) doivent prendre en compte le fichier du point précédent
